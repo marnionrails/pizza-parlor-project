@@ -4,8 +4,9 @@ function Pizza() {
   this.price = 0;
 }
 
-let pizza = new Pizza();
-console.log(pizza);
+Pizza.prototype.addToppings = function(topping) { 
+  this.toppings.push(topping);
+}
 
 Pizza.prototype.baseCost = function(size) {
   this.size = size;
