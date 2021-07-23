@@ -24,3 +24,25 @@ Pizza.prototype.totalCost = function(size) {
   let numOfToppings = this.toppings.length;
   this.price = pizza.baseCost(size) + (.5 * numOfToppings);
 }
+
+let pizza = new Pizza();
+$(document).ready(function() { 
+  $("#pizza").submit(function(event) {
+    event.preventDefault(); 
+    let customer = $("input[name='name']:text").val();
+    let size_choice = $("input[name='size']:checked").val();
+    $.each($("input[name='topping']:checked"), function(){
+      pizza.addToppings($(this).val());
+    });
+    pizza.totalCost(size_choice);
+    $(".customer").append(customer);
+    $(".show_size").append(size_choice);
+    $(".show_total").append(pizza.price);
+    $("#pizza").hide();
+    $("#output").show();
+    $("#refresh").show();
+  });
+  $("#reorder").click(function() {
+    window.location='/index.html';
+  });
+});
