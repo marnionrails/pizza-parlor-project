@@ -10,7 +10,45 @@
   <title>Marni's Pizza Parlor</title>
 </head>
 <body>
- 
+  <div class="jumbotron">
+    <h1>Marni's Pizza Parlor</h1>
+  </div>
+  <div class="container">
+    <img src="img/pizza.PNG" alt="pizza">
+    <form id = "pizza">
+      <label for = "name">Name: </label>
+      <input type="text" id="name" name="name">
+      
+      <h3>Choose pizza size</h3>
+      <input type="radio" id="8-inch" name="size" value="8-inch">
+      <label for="8-inch">8-inch ($6)</label>
+      <input type="radio" id="12-inch" name="size" value="12-inch">
+      <label for="12-inch">12-inch ($8)</label>
+      
+      <h3>Choose toppings ($0.50 each):</h3>
+      <input type="checkbox" id="extra-cheese" name="topping" value="extra-cheese">
+      <label for="extra-cheese">Extra Cheese</label><br>
+      <input type="checkbox" id="pepperoni" name="topping" value="pepperoni">
+      <label for="pepperoni">Pepperoni</label><br>
+      <input type="checkbox" id="eggplant" name="topping" value="eggplant">
+      <label for="eggplant">Eggplant</label><br>
+      <input type="checkbox" id="onions" name="topping" value="onions">
+      <label for="onions">Onions</label><br>
+      <input type="checkbox" id="spinach" name="topping" value="spinach">
+      <label for="spinach">Spinach</label><br>
+      <br>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    
+    <div id="output">
+      <h3>Thank you, <span class="customer"></span>!</h3>
+      <p><strong>Your order:</strong> <span class="show_size"></span> pizza</p>
+      <p><strong>Total:</strong> $<span class="show_total"></span></p>
+    </div>
+    <div id="refresh">
+      <button id="reorder" class="btn btn-primary">New Order</button>
+    </div>   
+  </div>
   
 </body>
 </html>
