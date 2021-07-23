@@ -15,8 +15,16 @@ By Marni Sucher
 
 This webpage allows users to order pizza from Marni's pizza parlor, selecting size of the pie and toppings. The cost of their order will be determined by the size and number of toppings. 
 
-## Tests
+## Setup/Installation Requirements
+* Clone repository: https://github.com/marnionrails/pizza-parlor-project
+* Go to pizza-parlor-project folder
+* Open index.html in any web browser
 
-Test 1: Describe(Pizza.baseCost(size))
-        "It will determine the price of a pizza based on size of 8-inch."
-        Expect(pizza.cost("8-inch).toEqual(6));
+## Known Bugs
+* None at this time
+
+## License
+GPL Copyright 2021 Marni Sucher
+
+## Contact Information
+Marni Sucher: <suchermarni@gmail.com>
