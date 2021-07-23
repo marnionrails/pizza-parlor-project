@@ -19,3 +19,8 @@ Pizza.prototype.baseCost = function(size) {
   }
   return this.price;
 };
+
+Pizza.prototype.totalCost = function(size) {
+  let numOfToppings = this.toppings.length;
+  this.price = pizza.baseCost(size) + (.5 * numOfToppings);
+}
