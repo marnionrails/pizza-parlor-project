@@ -25,10 +25,9 @@ Pizza.prototype.totalCost = function(size) {
   this.price = pizza.baseCost(size) + (.5 * numOfToppings);
 }
 
-
+let pizza = new Pizza();
 $(document).ready(function() { 
   $("#pizza").submit(function(event) {
-    let pizza = new Pizza();
     event.preventDefault(); 
     let customer = $("input[name='name']:text").val();
     let size_choice = $("input[name='size']:checked").val();
